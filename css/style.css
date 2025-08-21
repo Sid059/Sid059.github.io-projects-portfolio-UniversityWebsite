@@ -1,13 +1,13 @@
-@import url(/reset.css);
+@import url(./reset.css);
 
 @font-face {    /*after downloading font embedd it this way in your code*/
     font-family: Montserrat;
-    src: url(/Projects/UniversityWebsite/assets/font/Montserrat/Montserrat-VariableFont_wght.ttf);
+    src: url(../assets/font/Montserrat/Montserrat-VariableFont_wght.ttf);
 }
 
 @font-face {
     font-family: MontserratBold;
-    src: url(/Projects/UniversityWebsite/assets/font/Montserrat/static/Montserrat-Bold.ttf);
+    src: url(../assets/font/Montserrat/static/Montserrat-Bold.ttf);
 }
 
 :root {
@@ -71,7 +71,7 @@ html {
 /* body {
     min-height: 100vh; 
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(/Projects/UniversityWebsite/assets/images/banner.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../assets/images/banner.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;  
@@ -80,7 +80,7 @@ html {
 .navigation-section {
     min-height: 100vh;  /*-----important-----*/
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(/Projects/UniversityWebsite/assets/images/banner.png);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../assets/images/banner.png);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;   /*-----important-----*/
@@ -392,7 +392,7 @@ nav .fa-solid {     /*to hide icons*/
 .cta {
     margin: 100px auto;
     width: 90%;
-    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(/Projects/UniversityWebsite/assets/images/banner2.jpg);
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(../assets/images/banner2.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 12px;
@@ -651,7 +651,7 @@ nav .fa-solid {     /*to hide icons*/
 .aboutUs-navigation-section {
     height: 80vh;
     width: 100%;
-    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(/Projects/UniversityWebsite/assets/images/background.jpg);
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(../assets/images/background.jpg);
     background-position: center center;
     background-size: cover;
     background-repeat: no-repeat;   /*-----important-----*/
@@ -708,3 +708,4 @@ nav .fa-solid {     /*to hide icons*/
 .red-btn:hover {
     color: var(--WhiteColor);
 }
+
