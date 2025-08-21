@@ -1,0 +1,710 @@
+@import url(/reset.css);
+
+@font-face {    /*after downloading font embedd it this way in your code*/
+    font-family: Montserrat;
+    src: url(/Projects/UniversityWebsite/assets/font/Montserrat/Montserrat-VariableFont_wght.ttf);
+}
+
+@font-face {
+    font-family: MontserratBold;
+    src: url(/Projects/UniversityWebsite/assets/font/Montserrat/static/Montserrat-Bold.ttf);
+}
+
+:root {
+    --WhiteColor: #fff;
+    --RedColor: #f44336;
+    --p: 1rem;
+    --h1: 2.986rem;
+    --h2: 2.488rem;
+    --h3: 2.074rem;
+    --h4: 1.728rem;
+    --h5: 1.44rem;
+    --h6: 1.2rem;
+    --pMargin: 20px 0 40px;
+    --btnFontSize: 16px;
+    --tabletFontSizeH3: 2.074rem;
+    --courseAccentColor: #fff3f3;
+    --campusImgAccentColor: rgba(226,0,0,0.7);  /*campus cards have a transparent red because of this setting 0.7*/
+    --paraAccentColor: #999;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1 {
+    font-size: var(--h1);
+    font-family: MontserratBold;
+}
+
+h3 {
+    font-size: var(--h3);
+    font-family: MontserratBold;
+}
+
+p {
+    font-size: var(--p);
+    font-family: Montserrat;
+    margin: var(--pMargin);
+}
+
+h4 {
+    font-size: var(--h4);
+    font-family: MontserratBold;
+}
+
+a {
+    font-size: var(--p);
+    font-family: Montserrat;
+}
+
+input, textarea {
+    border: 1px solid var(--paraAccentColor);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* body {
+    min-height: 100vh; 
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(/Projects/UniversityWebsite/assets/images/banner.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;  
+} */
+
+.navigation-section {
+    min-height: 100vh;  /*-----important-----*/
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(/Projects/UniversityWebsite/assets/images/banner.png);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;   /*-----important-----*/
+    position: relative;
+    /* box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.8); */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 12px;
+
+    min-height: 8vh;
+    width: 100%;
+    position: fixed;    /*because i want the navbar to be scrolling throughout the page*/
+    top: 0;
+    background-color: rgba(0,0,0,0.8);  /*semi transparent*/
+    /* backdrop-filter: blur(10px);    blur effect */
+    /* -webkit-backdrop-filter: blur(10px); for safari support */
+    /* padding: 0 20px; Added padding for better spacing */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Added subtle shadow for a modern look */
+    z-index: 1;
+}
+
+.imageLogo {
+    width: 100%;
+    max-width: 160px;
+    margin: 2px 0 0 8px;
+    cursor: pointer;
+}
+
+.nav-links ul {
+    /* flex: 1;
+    text-align: right; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 8px 0 0;
+}
+
+.nav-links ul li {
+    padding: 0 12px;
+    /* display: inline-block;  */
+    position: relative;
+    cursor: pointer;
+}
+
+.nav-links ul li a {
+    color: var(--WhiteColor);
+}
+
+.nav-links ul li::after {   /*after is used to add extra styling content after the selected element without changing the HTML, commonly used to create undelines on hover, decorative effects, separators, animations*/
+    content: '';        /*content is required for ::after or ::before for the pseudo element to appear*/
+    display: block;     /*by default ::after elements are inline and do not accept any width or height so display is set to block to make it accept it*/
+    width: 0;
+    height: 2px;
+    background: var(--RedColor);
+    margin: auto;
+    transition: all 0.5s ease-in-out;  /*add transition on normal non hover state, hover is only for the change in values that are being animated*/
+}
+
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+
+.text-box {
+    width: 90%;
+    /* margin: auto; */
+    color: var(--WhiteColor);
+    position: absolute;     /*this is to center a div*/
+    top: 50%;       /*this is to center a div*/
+    left: 50%;          /*this is to center a div*/
+    transform: translate(-50%,-50%);        /*this is to center a div*/
+    text-align: center;
+}
+
+/* .text-box a {
+    font-family: Montserrat;
+} */
+
+.hero-btn {
+    display: inline-block;  /*block takes the full width where as inline-block doesnt*/
+    color: var(--WhiteColor);
+    border: 1px solid var(--WhiteColor);
+    border-radius: 2px;
+    padding: 12px 32px;
+    font-family: Montserrat;
+    font-size: var(--btnFontSize);
+    background: transparent;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.hero-btn:hover {
+    border: 1px solid var(--RedColor);
+    background: var(--RedColor);
+}
+
+nav .fa-solid {     /*to hide icons*/
+    display: none;
+}
+
+/*-------Course Section Begins--------*/
+
+/* .course h1 {
+    font-size: var(--h1);
+    font-family: MontserratBold;
+} */
+
+.course p {
+    /* color: var(--WhiteColor); */
+    /* font-weight: 300; */
+    line-height: 20px;  /*spacing between lines*/
+    padding: 8px;
+}
+
+.course {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.row {
+    margin-top: 5%;
+    margin-bottom: 5%;
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* flex-wrap: wrap; */
+    /* min-height: 24vh; */
+}
+
+/* .row .course-col:nth-child(n) {
+    flex: 1 1 300px;
+} */
+
+.course-col {
+    min-height: 24vh;
+    flex-basis: 32%;
+    /* flex: 1 1 100%; grow | shrink | basis */
+    background: var(--courseAccentColor);
+    padding: 2%;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    transition: all 0.5s ease-in-out;
+}
+
+.course-col:hover {
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2);
+}
+
+.course-col h6 {
+    font-size: var(--h6);
+    font-family: MontserratBold;
+    margin-bottom: 16px;
+}
+
+.course-col ul {
+    padding: 0 8px 16px;
+}
+
+.course-col ul li {
+    font-size: var(--p);
+    font-family: Montserrat;
+    /* text-align: left; */
+    padding: 4px 0;
+    cursor: pointer;
+}
+
+/*-----Course Section Ends------*/
+
+/*Campus section Begins*/
+.campus {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.campus-col {
+    max-height: 48vh;   /*IMPORTANT*/
+    flex-basis: 32%;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    position: relative;
+    overflow: hidden;   /*This rule is used to clip (or mask) anything inside .campus-col that visually spills out of its boundaries.*/
+    cursor: pointer;
+}
+
+.campus-col img{
+    display: block; /*since image is inline it leaves a few pixels space when the container is rounded so we have to make it block*/
+    width: 100%;
+    /* height: 100%;   only use this when the parent container has a height specified*/
+}
+
+.layer {
+    background: transparent;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.layer:hover {
+    background: var(--campusImgAccentColor);
+}
+
+.layer h6 {
+    font-size: var(--h6);
+    font-family: Montserrat;
+    width: 100%;
+    font-weight: 500;
+    color: var(--WhiteColor);
+
+    bottom: 0;
+    /* left: 50%; */
+    /* transform: translateX(-50%); */
+    position: absolute;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.layer:hover h6 {   /*it says when .layer is hovered apply styles to h6*/
+    bottom: 49%;
+    opacity: 1;
+}
+
+/*------Campus Section Ends--------*/
+
+/*------Facilities Section Begins-------*/
+
+.facilities {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 100px;
+}
+
+.facilities-col {
+    flex-basis: 32%;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    cursor: pointer;
+}
+
+.facilities-col h6 {
+    font-size: var(--h6);
+    font-family: MontserratBold;
+    margin: 16px 0;
+    /* text-align: left; */
+}
+
+.facilities-col p {
+    padding: 0;
+}
+
+.facilities-col img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/*------Facilities Section Ends------*/
+
+/*------Testimonials Section Begins------*/
+
+.testimonials {
+    width: 90%;
+    margin: auto;
+    text-align: center;
+    padding-top: 50px;
+}
+
+.testimonial-col {
+    flex-basis: 44%;
+    border-radius: 12px;
+    margin-bottom: 24px;
+    text-align: left;
+    background: var(--courseAccentColor);
+    padding: 25px;
+    cursor: pointer;
+    display: flex;
+}
+
+.testimonial-col img {
+    height: 40px;
+    margin-left: 5px;
+    margin-right: 30px;
+    border-radius: 50%;
+}
+
+.testimonial-col div p {
+    font-style: italic;
+    padding: 0;
+}
+
+.testimonial-col .fa-solid {
+    color: #f44336;
+}
+
+/*-----Testimonial Section Ends-----*/
+
+/*-----CTA Section Begins----*/
+
+.cta {
+    margin: 100px auto;
+    width: 90%;
+    background-image: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),url(/Projects/UniversityWebsite/assets/images/banner2.jpg);
+    background-position: center;
+    background-size: cover;
+    border-radius: 12px;
+    text-align: center;
+    padding: 100px 0;
+}
+
+.cta h1 {
+    color: var(--WhiteColor);
+    margin-bottom: 40px;
+    padding: 0;
+}
+
+/*-----cta section ends----*/
+
+/*-----blog section begins-------*/
+
+.blog-content {
+    width: 90%;
+    margin: auto;
+    padding: 60px 0;
+}
+
+.blog-left {
+    flex-basis: 64%;
+}
+
+.blog-left img {
+    width: 100%;
+}
+
+.blog-left h3 {
+    font-weight: 600;
+    margin: 32px 0;
+    color: #222;
+}
+
+.blog-left p {
+    color: var(--paraAccentColor);
+    padding: 0;
+}
+
+.comment-box {
+    border: 1px solid #ccc;
+    margin: 50px 0;
+    padding: 10px 20px;
+}
+
+.comment-box h3 {
+    text-align: left;
+}
+
+.comment-form input, .comment-form textarea{
+    width: 100%;
+    padding: 10px;
+    margin: 16px 0;
+    border: none;
+    outline: none;
+    background: #f0f0f0;
+}
+
+.comment-form button {
+    margin: 10px 0;
+}
+
+.blog-right {
+    flex-basis: 32%;
+}
+
+.blog-right h3 {
+    background: var(--RedColor);
+    color: var(--WhiteColor);
+    padding: 8px 0;
+    margin-bottom: 20px;
+    font-size: 16px;
+    text-align: center;
+}
+
+.blog-right div {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #555;
+    padding: 8px;
+}
+
+.blog-right span {
+    font-family: Montserrat;
+}
+
+/*-----blog section ends---------*/
+
+
+/*-----contact us section begins---------*/
+
+.location {
+    width: 90%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.location iframe {
+    width: 100%;
+}
+
+.contact-us {
+    width: 90%;
+    margin: auto;
+}
+
+.contact-col {
+    /* background: lightblue; */
+    flex-basis: 48%;
+    margin-bottom: 30px;
+}
+
+.contact-col div {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+
+.contact-col div .fa-solid{
+    font-size: 28px;
+    color: var(--RedColor);
+    padding-bottom: 30px;
+    margin-right: 30px;
+}
+
+.contact-col span h6,a {
+    font-weight: 400;
+    font-family: Montserrat;
+    font-size: 20px;
+    color: #555;
+}
+
+.contact-col div p {
+    padding: 0;
+    color: #555;
+}
+
+.contact-col input,textarea {
+    width: 100%;
+    padding: 16px;
+    margin-bottom: 16px;
+    outline: none;
+    border: 1px solid #ccc;
+    font-family: Montserrat;
+}
+
+/*-----contact us section ends---------*/
+
+
+/*-----footer section begins----*/
+
+.footer {
+    width: 100;
+    text-align: center;
+    padding: 30px 0;
+}
+
+.footer h4 {
+    margin-bottom: 32px;
+    margin-top: 20px;
+    font-weight: 600;
+}
+
+.icons .fa-brands {
+    color: var(--campusImgAccentColor);
+    margin: 0 13px;
+    cursor: pointer;
+    padding: 18px 0;
+}
+
+.fa-heart {
+    color: var(--campusImgAccentColor);
+}
+
+/*-----footer section ends----*/
+
+
+@media only screen and (max-width: 768px) {
+    h1 {
+        font-size: var(--tabletFontSizeH3);
+    }
+
+    .course h1 {
+    font-size: var(--h3);
+    }
+
+    .nav-links {
+        position: absolute;
+        top: 0;
+        right: -200px;   /*to hide the navbar menu*/
+        height: 100vh;
+        width: 200px;   
+        background: var(--RedColor);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        /* margin: auto; */
+    }
+
+    .nav-links ul li {
+        display: block;
+        width: auto;
+        padding: 24px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links ul li:hover::after {     /*changing the colour of the line appearing below the links*/
+        background: var(--WhiteColor);
+    }
+
+    nav .fa-solid {
+        display: block;
+        color: var(--WhiteColor);
+        font-size: var(--h5);
+        cursor: pointer;
+    }
+
+    nav .fa-xmark {
+        margin: 32px 0 8px 24px;
+        text-align: left;
+    }
+
+    nav .fa-bars {
+        margin: 0 16px 0 0;
+    }
+
+    /*-----course section-----*/
+
+    .row {
+        flex-direction: column;
+    }
+
+    .course-col {
+        min-height: 20vh;
+    }
+
+    /*----testimonial section-----*/
+    .testimonial-col img {
+        margin-left: 0;
+        margin-right: 15px;
+    }
+}
+
+/*----------About Us page----------*/
+
+.aboutUs-navigation-section {
+    height: 80vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7), rgba(4,9,30,0.7)), url(/Projects/UniversityWebsite/assets/images/background.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;   /*-----important-----*/
+    text-align: center;
+    color: var(--WhiteColor);
+    position: relative;
+}
+
+.about-container {
+    width: 90%;
+    min-height: 40vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.about-container h1 {
+    margin-top: 100px;
+}
+
+.about-us {
+    width: 90%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+
+.about-col {
+    flex-basis: 48%;
+    padding: 32px 2px;
+}
+
+.about-col img {
+    width: 100%;
+    border-radius: 12px;
+}
+
+/* .about-col h1 {
+    padding-top: 0;
+} */
+
+.about-col p {
+    margin: 0;
+    padding: 16px 0 28px;
+}
+
+.red-btn {
+    border: 1px solid var(--RedColor);
+    background: transparent;
+    color: var(--RedColor);
+}
+
+.red-btn:hover {
+    color: var(--WhiteColor);
+}
