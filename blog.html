@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+    <link rel="stylesheet" href="/Projects/UniversityWebsite/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"> <!--the cdn for fonts, after you paste this copy the i class code for fonts from-->
+</head>
+<body>
+    <!--Hero section-->
+    <section class="aboutUs-navigation-section" id="home">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="/Projects/UniversityWebsite/assets/images/logo.png" alt="UniversityLogo" class="imageLogo"></a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="about-container">
+            <h1>Latest from Our Campus.</h1>
+            <p>Explore campus life, academic news, research highlights, and student journeys.</p>
+        </div>
+    </section>
+
+    <!-------Blog Section------->
+
+    <section class="blog-content">
+        <div class="row">
+            <div class="blog-left">
+                <img src="/Projects/UniversityWebsite/assets/images/certificate.jpg" alt="certificateImage">
+                <h3>Our Certificate & Online Programs For 2025.</h3>
+                <p>At Eduford, we understand the evolving needs of today's learners. That's why our Certificate & Online Programs for 2025 are designed to be flexible, accessible, and career-oriented — empowering students and professionals to learn anytime, anywhere.</p>
+                <p>In today's fast-paced world, flexibility in education is more important than ever. Our online and certificate programs are designed to remove barriers and make learning more accessible for everyone — whether you're a working professional, a full-time student, or someone looking to explore a new interest. With user-friendly platforms, self-paced modules, and live sessions led by experienced instructors, we ensure that learners can engage meaningfully without compromising their current commitments.</p>
+                <p>Each program is built with a strong focus on practical, real-world application. From digital marketing and data analytics to communication skills and creative design, our courses are aligned with today’s industry needs. We partner with subject matter experts and professionals to keep our content updated and relevant, helping you develop in-demand skills that translate directly into career growth and new opportunities.</p>
+                <p>When you complete a program, you'll receive a certificate issued by [University Name] — a symbol of your commitment, achievement, and expertise. Our certifications are respected by employers and academic institutions alike, adding real value to your resume or academic portfolio. Whether you're upskilling, reskilling, or laying the groundwork for future studies, our programs offer a credible and impactful step forward.</p>
+            
+                <div class="comment-box">
+                    <h3>Leave a comment</h3>
+                    <form class="comment-form" action="">
+                        <input type="text" placeholder="Enter Your Name" id="" name="">
+                        <input type="email" placeholder="Enter Your Email" id="" name="">
+                        <textarea name="comment-box" id="comment-box" rows="5" placeholder="Your comment"></textarea>
+                        <button type="submit" class="hero-btn red-btn">POST COMMENT</button>
+                    </form>
+                </div>
+            
+            
+            </div>
+
+            <div class="blog-right">
+                <h3>Post Categories</h3>
+                <div>
+                    <span>Data Science</span>
+                    <span>18</span>
+                </div>
+                <div>
+                    <span>Web & Software Development</span>
+                    <span>15</span>
+                </div>
+                <div>
+                    <span>Cybersecurity & IT</span>
+                    <span>12</span>
+                </div>
+                <div>
+                    <span>Digital Marketing</span>
+                    <span>20</span>
+                </div>
+                <div>
+                    <span>Business & Management</span>
+                    <span>14</span>
+                </div>
+                <div>
+                    <span>Creative & Communication Skills</span>
+                    <span>10</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Footer section-->
+
+    <section class="footer" id="about">
+        <h4>Who We Are.</h4>
+        <p>We are a dynamic institution committed to academic excellence, innovation, and holistic student development. With experienced faculty, modern infrastructure, <br>and a strong emphasis on research and industry connections, we empower students to succeed in an ever-changing world.</p>
+        
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Siddharth</p>
+    </section>
+    <script src="/Projects/UniversityWebsite/js/app.js"></script>
+</body>
+</html>

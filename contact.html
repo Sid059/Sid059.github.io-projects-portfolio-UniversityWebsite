@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+    <link rel="stylesheet" href="/Projects/UniversityWebsite/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"> <!--the cdn for fonts, after you paste this copy the i class code for fonts from-->
+</head>
+<body>
+    <!--Hero section-->
+    <section class="aboutUs-navigation-section" id="home">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="/Projects/UniversityWebsite/assets/images/logo.png" alt="UniversityLogo" class="imageLogo"></a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="about-container">
+            <h1>Contact Us</h1>
+        </div>
+    </section>
+
+    <!-----Contact Us section------>
+
+    <section class="location">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36383.64164051111!2d87.27019762605129!3d22.27007205131118!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a1d4125e43a2825%3A0xf323ab6588153877!2sEFR%2CSalua%2C%20Salua%2C%20West%20Bengal%2C%20India!5e1!3m2!1sen!2suk!4v1750581950360!5m2!1sen!2suk" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" loading="lazy"></iframe>
+    </section>
+
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <div>
+                    <i class="fa-solid fa-house"></i>
+                    <span>
+                        <h6>XYZ Road, ABC Building</h6>
+                        <p>Banglore, Karnataka, IN</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <span>
+                        <h6><a href="tel:+1 0123456789">+1 0123456789</a></h6>
+                        <p>Monday to Saturday, 10:00 AM to 18:00 PM</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>
+                        <h6><a href="mailto:owner@anybusiness.abc">owner@anybusiness.abc</a></h6>
+                        <p>Email us your queries.</p>
+                    </span>
+                </div>
+            </div>
+
+            <div class="contact-col">
+                <form action="form-handler.php" method="post">
+                    <input type="text" placeholder="Enter Your Name" required name="name">
+                    <input type="email" placeholder="Enter Your Email address" required name="email">
+                    <input type="text" placeholder="Enter Your Subject" required name="subject">
+                    <textarea id="" rows="8" placeholder="Message" required name="message"></textarea>
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+    <!--About Us content-->
+
+    <!--Campus section-->
+
+    <!--Facilities-->
+
+    <!--Testimonials-->
+
+    <!----Call to Action---->
+
+    <!----Footer Section---->
+
+    <section class="footer" id="about">
+        <h4>Who We Are.</h4>
+        <p>We are a dynamic institution committed to academic excellence, innovation, and holistic student development. With experienced faculty, modern infrastructure, <br>and a strong emphasis on research and industry connections, we empower students to succeed in an ever-changing world.</p>
+        
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Siddharth</p>
+    </section>
+    <script src="/Projects/UniversityWebsite/js/app.js"></script>
+</body>
+</html>

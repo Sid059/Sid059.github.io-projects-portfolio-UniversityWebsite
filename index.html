@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>University Website Design</title>
+    <link rel="stylesheet" href="/Projects/UniversityWebsite/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.6.0/css/all.min.css"> <!--the cdn for fonts, after you paste this copy the i class code for fonts from-->
+</head>
+<body>
+    <!--Hero section-->
+    <section class="navigation-section" id="home">
+        <nav>
+            <div class="logo">
+                <a href="index.html"><img src="/Projects/UniversityWebsite/assets/images/logo.png" alt="UniversityLogo" class="imageLogo"></a>
+            </div>
+            <div class="nav-links" id="navLinks">
+                <i class="fa-solid fa-xmark" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="course.html">COURSE</a></li>
+                    <li><a href="blog.html">BLOG</a></li>
+                    <li><a href="contact.html">CONTACT</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <div class="text-box">
+            <h1>Welcome to Eduford University.</h1>
+            <p>Where ambition meets opportunity. At Eduford, we empower students to explore their passions, challenge the ordinary, <br>and build a future grounded in knowledge, innovation, and purpose. Join a vibrant academic community that's shaping tomorrow's leaders—today.</p>
+            <a href="" class="hero-btn">Visit us to know more</a>
+        </div>
+    </section>
+
+    <!--Course section-->
+    <section class="course" id="course">
+        <h1>Courses We Offer</h1>
+        <p>Explore a wide range of programs tailored to spark your passion and prepare you for a successful future. We offer undergraduate, postgraduate, and diploma courses across various disciplines.</p>
+        
+        <div class="row">
+            <div class="course-col">
+                <h6>Undergraduate Programs</h6>
+                <ul>
+                    <li><a href="#">BSc Computer Science</a></li>
+                    <li><a href="#">BA English Literature</a></li>
+                    <li><a href="#">BBA (Bachelor of Business Administration)</a></li>
+                    <li><a href="#">B.Tech in Electronics & Communication</a></li>
+                    <li><a href="#">BSc Psychology</a></li>
+                </ul>
+            </div>
+            <div class="course-col">
+                <h6>Postgraduate Programs</h6>
+                <ul>
+                    <li><a href="#">MSc Data Science</a></li>
+                    <li><a href="#">MA Economics</a></li>
+                    <li><a href="#">MBA (Master of Business Administration)</a></li>
+                    <li><a href="#">M.Tech in Civil Engineering</a></li>
+                    <li><a href="#">MSc Biotechnology</a></li>
+                </ul>
+            </div>
+            <div class="course-col">
+                <h6>Diploma & Certificate Courses</h6>
+                <ul>
+                    <li><a href="#">Diploma in Web Development</a></li>
+                    <li><a href="#">Certificate in Digital Marketing</a></li>
+                    <li><a href="#">Diploma in Business Analytics</a></li>
+                    <li><a href="#">Certificate in Environmental Studies</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!--Campus section-->
+
+    <section class="campus" id="blog">
+        <h1>Experience Life on Campus</h1>
+        <p>From state-of-the-art lecture halls and research labs to cozy cafés and sports arenas, our campus is designed to support your academic and personal growth. Join student clubs, attend cultural fests, and explore a community that values innovation and inclusion.</p>
+
+        <div class="row">
+            <div class="campus-col">
+                <img src="/Projects/UniversityWebsite/assets/images/london.png" alt="londonCampusImage">
+                <div class="layer">
+                    <h6>LONDON</h6>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="/Projects/UniversityWebsite/assets/images/newyork.png" alt="NewYorkCampusImage">
+                <div class="layer">
+                    <h6>NEW YORK</h6>
+                </div>
+            </div>
+            <div class="campus-col">
+                <img src="/Projects/UniversityWebsite/assets/images/washington.png" alt="WashingtonCampusImage">
+                <div class="layer">
+                    <h6>WASHINGTON</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--Facilities-->
+
+    <section class="facilities">
+        <h1>World-Class Facilities</h1>
+        <p>Explore a wide range of facilities designed to enrich your student experience</p>
+
+        <div class="row">
+            <div class="facilities-col">
+                <img src="/Projects/UniversityWebsite/assets/images/library.png" alt="libraryImage">
+                <h6>Library & Digital Resources</h6>
+                <p>Quiet study zones and 24/7 access to e-resources.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="/Projects/UniversityWebsite/assets/images/basketball.png" alt="basketballImage">
+                <h6>Gym & Sports Complex</h6>
+                <p>Indoor & outdoor facilities for fitness and sports.</p>
+            </div>
+            <div class="facilities-col">
+                <img src="/Projects/UniversityWebsite/assets/images/cafeteria.png" alt="cafeteriaImage">
+                <h6>Cafeterias & Dining Halls</h6>
+                <p>Diverse, hygienic meal options for all tastes.</p>
+            </div>
+        </div>
+    </section>
+
+    <!--Testimonials-->
+
+    <section class="testimonials">
+        <h1>What Our Students Say</h1>
+
+        <div class="row">
+            <div class="testimonial-col">
+                <img src="/Projects/UniversityWebsite/assets/images/user1.jpg" alt="UserOneImage">
+                <div>
+                    <p>“It truly felt like a second home. The campus environment and diverse community are unmatched.”</p>
+                    <p>— Ananya Sharma, B.Tech Computer Science</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+            <div class="testimonial-col">
+                <img src="/Projects/UniversityWebsite/assets/images/user2.jpg" alt="UserTwoImage">
+                <div>
+                    <p>“From academics to extracurriculars, this university shaped me into a confident professional.”</p>
+                    <p>— Rohit Mehra, MSc Biotechnology</p>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!----Call to Action---->
+
+    <section class="cta" id="contact">
+        <h1>Still Have Questions? We're Here to Help.</h1>
+        <!-- <p>Our admissions team is ready to guide you through every step — from course selection to enrollment.</p> -->
+        <a href="#" class="hero-btn">Contact Us</a>
+    </section>
+
+    <!----Footer Section---->
+
+    <section class="footer" id="about">
+        <h4>Who We Are.</h4>
+        <p>We are a dynamic institution committed to academic excellence, innovation, and holistic student development. With experienced faculty, modern infrastructure, <br>and a strong emphasis on research and industry connections, we empower students to succeed in an ever-changing world.</p>
+        
+        <div class="icons">
+            <i class="fa-brands fa-facebook"></i>
+            <i class="fa-brands fa-x-twitter"></i>
+            <i class="fa-brands fa-instagram"></i>
+            <i class="fa-brands fa-linkedin-in"></i>
+        </div>
+        <p>Made with <i class="fa-regular fa-heart"></i> by Siddharth</p>
+    </section>
+    <script src="/Projects/UniversityWebsite/js/app.js"></script>
+</body>
+</html>
