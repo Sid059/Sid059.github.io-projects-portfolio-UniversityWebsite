@@ -28,7 +28,7 @@ UniversityWebsite/
 └── 📖 README.md                 # Documentation
 
 ## 🌐 Live Demo
-[View Live Website](https://sidi059.github.io/projects-UniversityWebsite/)
+[View Live Website](https://sid059.github.io/Sid059.github.io-projects-UniversityWebsite/)
 
 ## 🛠 Technologies Used
 - HTML5
