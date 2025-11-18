@@ -10,6 +10,7 @@ A responsive university website built with HTML, CSS, and JavaScript featuring a
 - **Contact System** - Easy inquiry forms
 
 ## 📁 Project Structure
+```
 UniversityWebsite/
 ├── 📁 assets/
 │   ├── 📁 font/
@@ -26,6 +27,7 @@ UniversityWebsite/
 ├── 📄 blog.html                 # News and updates
 ├── 📄 contact.html              # Contact information
 └── 📖 README.md                 # Documentation
+```
 
 ## 🌐 Live Demo
 [View Live Website](https://sid059.github.io/university-website/)
